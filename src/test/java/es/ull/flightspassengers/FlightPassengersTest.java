@@ -52,7 +52,12 @@ public class FlightPassengersTest {
 	        	assertAll("Verifica todas las condiciones un intercambio a través de removePassenger y setFlight",
 	        	() -> assertEquals("LZ001", jaime.getFlight().getFlightNumber()),
 	        	() -> assertEquals(1, vueloFuerteventura.getNumberOfPassengers()),
-	        	() -> assertEquals(1, vueloLanzarote.getNumberOfPassengers()),
+	        	() -> assertEquals(0, vueloLanzarote.getNumberOfPassengers()),
+	        	() -> {
+	        		vueloLanzarote.addPassenger(jaime);
+	        		assertEquals(1, vueloLanzarote.getNumberOfPassengers());
+	        	},
+	        	() -> assertEquals(1, vueloFuerteventura.getNumberOfPassengers()),
 	        	() -> {
 	        		vueloFuerteventura.removePassenger(jaime);
 	        		assertEquals(0, vueloFuerteventura.getNumberOfPassengers());
