@@ -40,12 +40,14 @@ public class FlightTest {
         @Test
         @DisplayName("Tests Errores de Creación y Maximo numero de Pasajeros")
         void testErrorCreationAndSeatsAvailable() {
+
+        	vueloFuerteventura1Plaza.addPassenger(miguel);
+
         	RuntimeException exceptionFlightBadFormatted = assertThrows(RuntimeException.class,
                     () -> vueloMalFormado = new Flight("FV01", 100));
 
         	RuntimeException exceptionFlightMaximumPassengers = assertThrows(RuntimeException.class,
                     () -> {
-                    	vueloFuerteventura1Plaza.addPassenger(miguel);
                     	vueloFuerteventura1Plaza.addPassenger(jaime);
                     });
         	assertEquals("Invalid flight number", exceptionFlightBadFormatted.getMessage());
