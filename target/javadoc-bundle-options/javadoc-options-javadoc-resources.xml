@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<javadocOptions>
+  <docletArtifacts>
+    <docletArtifact />
+  </docletArtifacts>
+  <tagletArtifacts>
+    <tagletArtifact />
+  </tagletArtifacts>
+  <links>
+    <link>../apidocs</link>
+  </links>
+  <excludePackageNames>
+    <excludePackageName>recommendation_system.edu.duke</excludePackageName>
+  </excludePackageNames>
+  <javadocResourcesDirectory>src/test/javadoc</javadocResourcesDirectory>
+</javadocOptions>
