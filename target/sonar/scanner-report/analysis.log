@@ -1,0 +1,88 @@
+SonarCloud plugins:
+  - IaC Code Quality and Security 1.9.2.2279 (iac)
+  - PL/SQL Code Quality and Security 3.8.0.4948 (plsql)
+  - Scala Code Quality and Security 1.11.0.3905 (sonarscala)
+  - C# Code Quality and Security 8.50.0.58025 (csharp)
+  - Vulnerability Analysis 9.8.0.18639 (security)
+  - Java Code Quality and Security 7.15.0.30507 (java)
+  - HTML Code Quality and Security 3.7.1.3306 (web)
+  - Flex Code Quality and Security 2.8.0.3166 (flex)
+  - XML Code Quality and Security 2.6.1.3686 (xml)
+  - Text file Code Quality and Security 1.2.0.510 (text)
+  - VB.NET Code Quality and Security 8.50.0.58025 (vbnet)
+  - Swift Code Quality and Security 4.7.0.5624 (swift)
+  - CFamily Code Quality and Security 6.40.0.60596 (cpp)
+  - Python Code Quality and Security 3.21.0.10628 (python)
+  - Dataflow Bug Detection Rules for Python 1.9.0.2901 (dbdpythonfrontend)
+  - Dataflow Bug Detection 1.9.0.2901 (dbd)
+  - Go Code Quality and Security 1.11.0.3905 (go)
+  - JaCoCo 1.1.1.1157 (jacoco)
+  - Kotlin Code Quality and Security 2.12.0.1956 (kotlin)
+  - Dataflow Bug Detection Rules for Java 1.9.0.2901 (dbdjavafrontend)
+  - T-SQL Code Quality and Security 1.7.0.5449 (tsql)
+  - Apex Code Quality and Security 1.11.0.3905 (sonarapex)
+  - JavaScript/TypeScript/CSS Code Quality and Security 9.12.0.20319 (javascript)
+  - Ruby Code Quality and Security 1.11.0.3905 (ruby)
+  - Vulnerability Rules for C# 9.8.0.18639 (securitycsharpfrontend)
+  - Vulnerability Rules for Java 9.8.0.18639 (securityjavafrontend)
+  - License for SonarLint 8.0.0.35660 (license)
+  - Vulnerability Rules for JS 9.8.0.18639 (securityjsfrontend)
+  - COBOL Code Quality 5.2.0.5949 (cobol)
+  - Vulnerability Rules for Python 9.8.0.18639 (securitypythonfrontend)
+  - PHP Code Quality and Security 3.25.0.9077 (php)
+  - ABAP Code Quality and Security 3.11.0.4030 (abap)
+  - Configuration detection fot Code Quality and Security 1.2.0.267 (config)
+  - Vulnerability Rules for PHP 9.8.0.18639 (securityphpfrontend)
+Global server settings:
+  - email.from=noreply@sonarcloud.io
+  - email.fromName=SonarCloud
+  - email.prefix=[SonarCloud]
+  - sonar.auth.bitbucket.enabled=true
+  - sonar.auth.microsoft.enabled=true
+  - sonar.core.id=1BD809FA-AWHW8ct9-T_TB3XqouNu
+  - sonar.core.serverBaseURL=https://sonarcloud.io
+  - sonar.core.startTime=2022-12-14T14:14:14+0100
+  - sonar.dbcleaner.weeksBeforeDeletingAllSnapshots=260
+  - sonar.dbcleaner.weeksBeforeKeepingOnlyOneSnapshotByMonth=4
+  - sonar.dbcleaner.weeksBeforeKeepingOnlyOneSnapshotByWeek=1
+  - sonar.global.exclusions=**/build-wrapper-dump.json
+  - sonar.lf.enableGravatar=true
+  - sonar.lf.logoWidthPx=105
+  - sonar.maintenance_mode.link=https://sonarcloud.statuspage.io/incidents/66vlr4dc3jwy
+  - sonar.maintenance_mode.message=Results of analyses performed prior to 6:15am CET may not be available yet and will be progressively provided throughout coming hours. Results of analysis performed after 8:00am CET are available.
+  - sonar.maintenance_mode.start_date=2022-03-26T23:00:00.000+01:00
+  - sonar.organizations.anyoneCanCreate=true
+  - sonar.organizations.createPersonalOrg=true
+  - sonar.plsql.file.suffixes=sql,tab,pkb
+  - sonar.tsql.file.suffixes=.tsql
+Project server settings:
+Project scanner properties:
+  - sonar.binaries=/home/phillipmc/NAS/Clases/Clases 2022-23/Laboratorio/Practicas/Practica5Junit/Airport/target/classes
+  - sonar.groovy.binaries=/home/phillipmc/NAS/Clases/Clases 2022-23/Laboratorio/Practicas/Practica5Junit/Airport/target/classes
+  - sonar.host.url=https://sonarcloud.io
+  - sonar.java.binaries=/home/phillipmc/NAS/Clases/Clases 2022-23/Laboratorio/Practicas/Practica5Junit/Airport/target/classes
+  - sonar.java.source=1.8
+  - sonar.java.target=1.8
+  - sonar.java.test.binaries=/home/phillipmc/NAS/Clases/Clases 2022-23/Laboratorio/Practicas/Practica5Junit/Airport/target/test-classes
+  - sonar.java.test.libraries=/home/phillipmc/NAS/Clases/Clases 2022-23/Laboratorio/Practicas/Practica5Junit/Airport/target/classes,/home/phillipmc/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar,/home/phillipmc/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar,/home/phillipmc/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar,/home/phillipmc/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar,/home/phillipmc/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar,/home/phillipmc/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar,/home/phillipmc/.m2/repository/org/jacoco/jacoco-maven-plugin/0.8.7/jacoco-maven-plugin-0.8.7.jar,/home/phillipmc/.m2/repository/org/apache/maven/maven-plugin-api/3.0/maven-plugin-api-3.0.jar,/home/phillipmc/.m2/repository/org/apache/maven/maven-model/3.0/maven-model-3.0.jar,/home/phil...
+  - sonar.junit.reportPaths=/home/phillipmc/NAS/Clases/Clases 2022-23/Laboratorio/Practicas/Practica5Junit/Airport/target/surefire-reports
+  - sonar.junit.reportsPath=/home/phillipmc/NAS/Clases/Clases 2022-23/Laboratorio/Practicas/Practica5Junit/Airport/target/surefire-reports
+  - sonar.links.ci=
+  - sonar.links.homepage=
+  - sonar.links.issue=
+  - sonar.links.scm=
+  - sonar.links.scm_dev=
+  - sonar.moduleKey=es.ull.flights:junit-flights
+  - sonar.organization=alu0100406580
+  - sonar.projectBaseDir=/home/phillipmc/NAS/Clases/Clases 2022-23/Laboratorio/Practicas/Practica5Junit/Airport
+  - sonar.projectBuildDir=/home/phillipmc/NAS/Clases/Clases 2022-23/Laboratorio/Practicas/Practica5Junit/Airport/target
+  - sonar.projectKey=es.ull.flights:junit-flights
+  - sonar.projectName=junit-flights
+  - sonar.projectVersion=1.0-SNAPSHOT
+  - sonar.scanner.app=ScannerMaven
+  - sonar.scanner.appVersion=3.9.1.2184/3.6.3
+  - sonar.sourceEncoding=UTF-8
+  - sonar.sources=/home/phillipmc/NAS/Clases/Clases 2022-23/Laboratorio/Practicas/Practica5Junit/Airport/pom.xml,/home/phillipmc/NAS/Clases/Clases 2022-23/Laboratorio/Practicas/Practica5Junit/Airport/src/main/java
+  - sonar.tests=/home/phillipmc/NAS/Clases/Clases 2022-23/Laboratorio/Practicas/Practica5Junit/Airport/src/test/java
+  - sonar.verbose=true
+  - sonar.working.directory=/home/phillipmc/NAS/Clases/Clases 2022-23/Laboratorio/Practicas/Practica5Junit/Airport/target/sonar

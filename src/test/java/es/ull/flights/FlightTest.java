@@ -28,52 +28,47 @@ public class FlightTest {
         	jaime = new Passenger("id-FV01-2","Jaime", "ES");
         }
 
-        @Nested
-        @DisplayName("Vuelos")
-        class RegularFlight {
+        @Test
+        @DisplayName("Generación y getters")
+        void testFlightGetters() {
+            assertAll("Verifica todas las condiciones para las pruebas de un vuelo normal",
+                    () -> assertEquals("FV001", vueloFuerteventura.getFlightNumber()),
+                    () -> assertEquals(0, vueloFuerteventura.getNumberOfPassengers())
+            );
+        }
 
-            @Test
-            @DisplayName("Generación y getters")
-            public void testEconomyFlightRegularPassenger() {
-                assertAll("Verifica todas las condiciones para las pruebas de un vuelo normal",
-                        () -> assertEquals("FV001", vueloFuerteventura.getFlightNumber()),
-                        () -> assertEquals(0, vueloFuerteventura.getNumberOfPassengers())
-                );
-            }
+        @Test
+        @DisplayName("Tests Errores de Creación y Maximo numero de Pasajeros")
+        void testErrorCreationAndSeatsAvailable() {
+        	RuntimeException exceptionFlightBadFormatted = assertThrows(RuntimeException.class,
+                    () -> vueloMalFormado = new Flight("FV01", 100));
 
-            @Test
-            @DisplayName("Tests Errores de Creación y Maximo numero de Pasajeros")
-            public void testErrorCreationAndSeatsAvailable() {
-            	RuntimeException exceptionFlightBadFormatted = assertThrows(RuntimeException.class,
-                        () -> vueloMalFormado = new Flight("FV01", 100));
+        	RuntimeException exceptionFlightMaximumPassengers = assertThrows(RuntimeException.class,
+                    () -> {
+                    	vueloFuerteventura1Plaza.addPassenger(miguel);
+                    	vueloFuerteventura1Plaza.addPassenger(jaime);
+                    });
+        	assertEquals("Invalid flight number", exceptionFlightBadFormatted.getMessage());
+        	assertEquals("Not enough seats for flight " + vueloFuerteventura1Plaza.getFlightNumber(), exceptionFlightMaximumPassengers.getMessage());
+        }
 
-            	RuntimeException exceptionFlightMaximumPassengers = assertThrows(RuntimeException.class,
-                        () -> {
-                        	vueloFuerteventura1Plaza.addPassenger(miguel);
-                        	vueloFuerteventura1Plaza.addPassenger(jaime);
-                        });
-            	assertEquals("Invalid flight number", exceptionFlightBadFormatted.getMessage());
-            	assertEquals("Not enough seats for flight " + vueloFuerteventura1Plaza.getFlightNumber(), exceptionFlightMaximumPassengers.getMessage());
-            }
-
-            @Test
-            @DisplayName("Test Añadir y Eliminar Pasajeros")
-            public void testAddRemovePassengers() {
-            	assertAll("Verificar inserción de pasajeros",
-            	() -> {
-            		vueloFuerteventura.addPassenger(miguel);
-            		assertEquals(1, vueloFuerteventura.getNumberOfPassengers());
-                	vueloFuerteventura.addPassenger(jaime);
-            		assertEquals(2, vueloFuerteventura.getNumberOfPassengers());
-            	});
-            	assertAll("Verificar Eliminación de pasajeros",
-            	() -> {
-            		vueloFuerteventura.removePassenger(jaime);
-            		assertEquals(1, vueloFuerteventura.getNumberOfPassengers());
-                	vueloFuerteventura.removePassenger(miguel);
-            		assertEquals(0, vueloFuerteventura.getNumberOfPassengers());
-            	});
-            }
+        @Test
+        @DisplayName("Test Añadir y Eliminar Pasajeros")
+        void testAddRemovePassengers() {
+        	assertAll("Verificar inserción de pasajeros",
+        	() -> {
+        		vueloFuerteventura.addPassenger(miguel);
+        		assertEquals(1, vueloFuerteventura.getNumberOfPassengers());
+            	vueloFuerteventura.addPassenger(jaime);
+        		assertEquals(2, vueloFuerteventura.getNumberOfPassengers());
+        	});
+        	assertAll("Verificar Eliminación de pasajeros",
+        	() -> {
+        		vueloFuerteventura.removePassenger(jaime);
+        		assertEquals(1, vueloFuerteventura.getNumberOfPassengers());
+            	vueloFuerteventura.removePassenger(miguel);
+        		assertEquals(0, vueloFuerteventura.getNumberOfPassengers());
+        	});
         }
     }
 }
